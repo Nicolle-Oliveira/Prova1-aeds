@@ -6,6 +6,8 @@
 #define SUCESSO 0
 #define FALHA 1
 
+#define MAX_VAGOES 26
+
 //O inicio...
 int main(int argc, char** argv) {
 
@@ -119,8 +121,6 @@ int main(int argc, char** argv) {
 	* Não consegui pensar em uma condição para o while, ent coloquei o contador i msm, mas so por enquanto
 	*/
 	
-	quant = quant*2;
-	
 	do {
 
 		//Obtendo a letra do vagão que precisamos arrumar
@@ -144,7 +144,7 @@ int main(int argc, char** argv) {
 		/*Se em todas as vezes precisamos insererir e remover cada letra, colocando quant*2 na condição rodariamos somente o necessário
 		*Condição provisória*/
 		i++;
-	} while ( i < quant);
+	} while ( i < MAX_VAOGOES);
 
 	//Se no fim de tudo a pilha "resposta" não estiver vazia, significa que a organização foi impossível
 	if (pilha_lst_vazia(resposta) != FALHA) {
