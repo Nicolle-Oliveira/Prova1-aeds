@@ -118,6 +118,9 @@ int main(int argc, char** argv) {
 	* Funciona até uma certa parte, mas as condições estão erradas
 	* Não consegui pensar em uma condição para o while, ent coloquei o contador i msm, mas so por enquanto
 	*/
+	
+	quant = quant*2;
+	
 	do {
 
 		//Obtendo a letra do vagão que precisamos arrumar
@@ -138,9 +141,10 @@ int main(int argc, char** argv) {
 			printf("R");
 		}
 
-		//Contador provisório, precisamos de uma nova condição..
+		/*Se em todas as vezes precisamos insererir e remover cada letra, colocando quant*2 na condição rodariamos somente o necessário
+		*Condição provisória*/
 		i++;
-	} while ( i < 100);
+	} while ( i < quant);
 
 	//Se no fim de tudo a pilha "resposta" não estiver vazia, significa que a organização foi impossível
 	if (pilha_lst_vazia(resposta) != FALHA) {
