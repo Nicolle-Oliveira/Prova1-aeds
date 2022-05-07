@@ -65,14 +65,14 @@ int main(int argc, char** argv) {
 
 	do {
 
-		if (ajuda == SUCESSO && pilha_lst_vazia(resposta) != FALHA) {
+		if (ajuda == SUCESSO ) {
 			letra_apoio = pilha_lst_pop(ordem_nova);
 		}
 
 		if (ajuda != SUCESSO && insere > 0) {
 			letra_procura = pilha_lst_pop(ordem_errada);
 		}
-		else if (ajuda == SUCESSO) {
+		else if (ajuda == SUCESSO && pilha_lst_vazia(resposta) != FALHA) {
 			letra_procura = pilha_lst_pop(resposta);
 			pilha_lst_push(resposta, letra_procura);
 		}
